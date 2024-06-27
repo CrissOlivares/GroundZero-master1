@@ -19,5 +19,5 @@ from django.conf.urls import include
 from cliente import views
 urlpatterns = [
     path('admin/', admin.site.urls),
-   path('',include('cliente.urls')),
+   path('cliente',include('cliente.urls')),
 ]
