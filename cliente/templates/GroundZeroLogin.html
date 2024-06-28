@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="{% static 'css/GroundZero.css' %}">
+    <link rel="stylesheet" href="./static/css/GroundZero.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GroundZero</title>
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="./static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./static/css/style.css">
 </head>
 <body style="background-color:#EEEDEC;">
 <!-- inicio login -->
@@ -38,13 +38,14 @@
 
 <!-- Boton Para Retroceder -->
 <div class="input-box button">
-    <button type="button" onclick="window.location.href='{% url 'GroundZeroInicio.html'%}'" class="back-button"> 
-    Pagina principal
-    </button>
+  <button type="button" onclick="window.location.href='{% url 'GroundZeroInicio' %}'" class="back-button"> 
+      Página principal
+  </button>
 </div>
+
 <!-- Fin Boton Para Retroceder -->
 
-<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+<script src="static/js/bootstrap.bundle.min.js"></script>
 <!-- javaScript code -->
 <script>
     var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))

@@ -1,42 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="{% static 'css/GroundZero.css' %}">
+    <link rel="stylesheet" href="static/css/GroundZero.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GroundZero</title>
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/style.css">
 </head>
 <body style="background-color:#EEEDEC;">
 <!-- inicio register -->
 <div class="wrapper">
-    <h2>Registro</h2>
-    <form id="registerForm" action="#" method="post">
-      {% csrf_token %}
-      <div class="input-box">
-        {{ register_form.username }}
-      </div>
-      <div class="input-box">
-        {{ register_form.password1 }}
-      </div>
-      <div class="input-box">
-        {{ register_form.password2 }}
-      </div>
-      <div class="policy">
-        <input type="checkbox" id="terminosycondiciones" name="terminosycondiciones">
-        <label for="terminosycondiciones">Aceptas los <a href="GroundZeroTerminos.html">terminos y condiciones</a></label>
-      </div>
-      <div class="input-box button">
-        <input type="submit" value="Regístrate Ahora">
-      </div>
-      <div class="text">
-        <h3>¿Ya tienes una cuenta? <a href="{% url 'GroundZeroLogin.html'%}">Ingresa Aquí</a></h3>
-      </div>
-    </form>
-  </div>
 
-  {% include 'footer.html' %}
+  <h2>Registro</h2>
+  <form id="registerForm" action="#">
+    {% csrf_token %}
+    <div class="input-box">
+      <input id="InputCorreo" type="email" placeholder="Ingresa tu Correo" required>
+      {{ register_form.username }}
+    </div>
+    <div class="input-box">
+      <input id="Inputcontrasena" type="password" placeholder="Crea tu contraseña" required>
+      {{ register_form.password1 }}
+    </div>
+    <div class="input-box">
+      <input id="Inputconfirmacioncontrasena" type="password" placeholder="Confirma tu contraseña" required>
+    </div>
+      {{ register_form.password2 }}
+    <div class="policy"> 
+      <input type="checkbox" id="terminosycondiciones">
+      <h3>Aceptas los <a href="terminosycondiciones.html">terminos y condiciones</a></h3>
+    </div>
+    <div class="input-box button">
+      <input type="Submit" value="Regístrate Ahora">
+    </div>
+    <div class="text">
+      <h3>¿Ya tienes una cuenta? <a href="./GroundZeroLogin.html">Ingresa Aquí</a></h3>
+    </div>
+  </form>
+</div>
+
 
   <!-- fin register -->
   
@@ -47,7 +50,7 @@
     </button>
   </div>
 
-  <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+  <script src="static/js/bootstrap.bundle.min.js"></script>
 
   <!-- javaScript code Poppover-->
   <script>
