@@ -22,13 +22,13 @@
       </div>
       <div class="policy">
         <input type="checkbox">
-        <h3>Guardar Datos</h3>
+        <h3>Guardar datos</h3>
       </div>
       <div class="input-box button">
         <input type="Submit" value="Ingresar">
       </div>
       <div class="text">
-        <h3>No tienes cuenta? <a href="{% url 'GroundZeroRegister.html'%}">Registrate Aca</a></h3>
+        <h3>No tienes cuenta? <a href="{% url 'GroundZeroRegister.html'%}">Registrate Aquí</a></h3>
       </div>
     </form>
   </div>
@@ -36,7 +36,7 @@
 
     <!-- Boton Para Retroceder -->
   <div class="input-box button">
-    <button type="button" onclick="window.location.href='./GroundZeroInicio.html'" class="back-button">
+    <button type="button" onclick="window.location.href='{% url 'GroundZeroInicio.html'%}'" class="back-button">
     Pagina principal
     </button>
   </div>

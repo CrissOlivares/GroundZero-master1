@@ -10,7 +10,7 @@
 </head>
 <body style="background-color:#EEEDEC;">
 <!-- inicio register -->
-<div class="container">
+<div class="wrapper">
     <h2>Registro</h2>
     <form id="registerForm" action="#">
       <div class="input-box">
@@ -27,18 +27,25 @@
       </div>
       <div class="policy">
         <input type="checkbox" id="terminosycondiciones">
-        <h3>Acepto los términos y condiciones</h3>
+        <h3>Aceptas los <a href="terminosycondiciones.html">terminos y condiciones</a></h3>
       </div>
       <div class="input-box button">
         <input type="Submit" value="Regístrate Ahora">
       </div>
       <div class="text">
-        <h3>¿Ya tienes cuenta? <a href="{% url 'GroundZeroLogin.html'%}">Ingresa Aca</a></h3>
+        <h3>¿Ya tienes una cuenta? <a href="{% url 'GroundZeroLogin.html'%}">Ingresa Aquí</a></h3>
       </div>
     </form>
   </div>
   <!-- fin register -->
   
+  <!-- Boton Para Retroceder -->
+      <div class="input-box button">
+        <button type="button" onclick="window.location.href='{% url 'GroundZeroInicio.html'%}'" class="back-button"> 
+        Pagina principal
+        </button>
+      </div>
+
   <script src="./static/js/js/bootstrap.bundle.min.js"></script>
 
   <!-- javaScript code Poppover-->
