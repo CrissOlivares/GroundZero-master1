@@ -14,20 +14,22 @@
     <h2>Registro</h2>
     <form id="registerForm" action="#">
       <div class="input-box">
-        <input id="InputNombre" type="text" placeholder="Ingresa tu Nombre" required>
-      </div>
-      <div class="input-box">
+
+        {% csrf_token %}
         <input id="InputCorreo" type="email" placeholder="Ingresa tu Correo" required>
       </div>
+      {{ register_form.username }}
       <div class="input-box">
         <input id="Inputcontrasena" type="password" placeholder="Crea tu contraseña" required>
       </div>
+      {{ register_form.password1 }}
       <div class="input-box">
         <input id="Inputconfirmacioncontrasena" type="password" placeholder="Repite tu contraseña" required>
       </div>
+      {{ register_form.password2 }}
       <div class="policy">
         <input type="checkbox" id="terminosycondiciones">
-        <h3>Aceptas los <a href="terminosycondiciones.html">terminos y condiciones</a></h3>
+        <h3>Aceptas los <a href="GroundZeroTerminos.html">terminos y condiciones</a></h3>
       </div>
       <div class="input-box button">
         <input type="Submit" value="Regístrate Ahora">
@@ -37,6 +39,9 @@
       </div>
     </form>
   </div>
+
+  {% include 'footer.html' %}
+
   <!-- fin register -->
   
   <!-- Boton Para Retroceder -->
