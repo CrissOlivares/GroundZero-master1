@@ -12,4 +12,6 @@ urlpatterns=[
     path('GroundZeroRegister.html',views.GroundZeroRegister,name="GroundZeroRegister.html"),
     path('GroundZeroPaises.html',views.GroundZeroPaises,name="GroundZeroPaises.html"),
     path('GroundZeropPQ.html',views.GroundZeropPQ,name="GroundZeropPQ.html"),
+    path('login/', views.login_view, name='login'),
+    # Otras URLs de tu aplicación
 ]

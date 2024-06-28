@@ -33,3 +33,24 @@ def GroundZeroPaises(request):
 
 def GroundZeropPQ(request):
     return render(request,'GroundZeropPQ.html')
+
+from django.shortcuts import render, redirect
+from django.contrib.auth import authenticate, login
+
+def login_view(request):
+    if request.method == 'POST':
+        email = request.POST.get('email')
+        password = request.POST.get('password')
+        remember = request.POST.get('remember')
+
+        user = authenticate(request, username=email, password=password)
+        if user is not None:
+            login(request, user)
+            if remember:
+                request.session.set_expiry(2592000)  # 30 dias en Segundos
+            return redirect('pagina_principal')  # Redirige a la página principal
+        else:
+            # Retorna a Credenciales Invalidas
+            return render(request, 'mi_template.html', {'error': 'Credenciales inválidas'})
+    else:
+        return render(request, 'mi_template.html')
