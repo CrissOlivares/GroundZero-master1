@@ -15,4 +15,9 @@ urlpatterns=[
     path('GroundZeroInicio.html',views.GroundZeroInicio,name="GroundZeroInicio.html"),
     path('index.html',views.index,name="index.html"),
   
+  #crud 
+    path('crud_generos', views.crud_generos, name='crud_generos'),
+    path('generosAdd', views.generosAdd, name='generosAdd'),
+    path('generos_del/<str:pk>', views.generos_del, name='generos_del'),
+    path('generos_edit/<str:pk>', views.generos_edit, name='generos_edit'),
 ]

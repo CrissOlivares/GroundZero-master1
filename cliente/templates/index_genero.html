@@ -7,7 +7,7 @@
     <title>GroundZero</title>
     <link rel="stylesheet" href="./static/css/css/bootstrap.min.css">
     <link rel="stylesheet" href="./static/css/paises.css">
-   
+    
 </head>
 <body style="background-color:#EEEDEC;">
 
@@ -54,11 +54,14 @@
       </nav>
       <!-- final de nav -->
       <body>
-        <h1>hola usuarios</h1>
+        <h1>Usuarios</h1>
         <br>
-       
+        {% for cliente in usuarios %}
+
+        {{cliente.rut}},{{cliente.nombre}},{{cliente.apellido_paterno}},
+        {{cliente.apellido_materno}},{{cliente.id_genero.genero}}
       <br>
-      
+      {% endfor %}
       </body>
     
   

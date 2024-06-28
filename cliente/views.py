@@ -13,6 +13,12 @@ def index(request):
     context={"Usuarios":usuarios}
     return render(request,'index.html',context)
 
+def crud_generos(request):
+    generos=Genero.objetcs.all()
+    context={'generos': generos}
+    print("enviando datos de generos_list")
+    return render(request, "index_genero.html",context)
+
 def GroundZeroInicio(request):
     return render(request,'GroundZeroInicio.html')
 
