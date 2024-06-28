@@ -12,7 +12,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url('https://wallpapers.com/images/featured/4k-painting-ze08s2umco2ikud6.jpg'); /* Ruta a tu imagen de fondo */
+  background-image: url('https://preview.redd.it/national-park-4k-3840x2160-by-a-i-v0-g4crddfnmt9a1.jpg?width=1080&crop=smart&auto=webp&s=4889dfb7d6b7f4bb8dfb24491b3beeeabac18695'); /* Ruta a tu imagen de fondo */
   background-size: cover;
   background-position: center;
 }
@@ -21,7 +21,7 @@ body {
   position: relative;
   max-width: 430px;
   width: 100%;
-  background-color: rgba(145, 145, 145, 0.8); /* Color de fondo con transparencia */
+  background-color: rgba(58, 58, 58, 0.8); /* Color de fondo con transparencia */
   padding: 34px;
   border-radius: 6px;
   box-shadow: 0 5px 10px rgba(0,0,0,0.2);
@@ -31,7 +31,7 @@ body {
   position: relative;
   font-size: 22px;
   font-weight: 600;
-  color: #000000;
+  color: #ffffff;
 }
 
 .wrapper h2::before {
@@ -40,9 +40,9 @@ body {
   left: 0;
   bottom: 0;
   height: 3px;
-  width: 28px;
+  width: 20px;
   border-radius: 12px;
-  background: #4070f4;
+  background: #6c757d;
 }
 
 .wrapper form {
@@ -70,7 +70,7 @@ form .input-box input {
 
 .input-box input:focus,
 .input-box input:valid {
-  border-color: #4070f4;
+  border-color: #6c757d;
 }
 
 form .policy {
@@ -82,19 +82,20 @@ form h3 {
   color: #f9f9f9;
   font-size: 14px;
   font-weight: 500;
-  margin-left: 10px;
+  margin-left: 9px;
+  margin-top: 10px;
 }
 
 .input-box.button input {
   color: #fff;
   letter-spacing: 1px;
   border: none;
-  background: #4070f4;
+  background: #6c757d;
   cursor: pointer;
 }
 
 .input-box.button input:hover {
-  background: #0e4bf1;
+  background: #6c757d;
 }
 
 form .text h3 {
@@ -109,5 +110,26 @@ form .text h3 a {
 }
 
 form .text h3 a:hover {
+  text-decoration: underline;
+}
+
+h2 {
+ color:rgba(255, 255, 255, 0.8);
+}
+
+
+
+.back-button {
+  color:rgba(255, 255, 255, 0.8);
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.back-button:hover {
   text-decoration: underline;
 }

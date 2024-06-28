@@ -10,7 +10,8 @@
 </head>
 <body style="background-color:#EEEDEC;">
 <!-- inicio login -->
-<div class="container">
+
+<div class="wrapper">
     <h2>Ingreso</h2>
     <form action="#">
       <div class="input-box">
@@ -32,7 +33,16 @@
     </form>
   </div>
   <!-- fin login -->
-  <script src="./static/js/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Boton Para Retroceder -->
+  <div class="input-box button">
+    <button type="button" onclick="window.location.href='./GroundZeroInicio.html'" class="back-button">
+    Pagina principal
+    </button>
+  </div>
+    <!-- Fin Boton Para Retroceder -->
+
+  <script src="./js/bootstrap.bundle.min.js"></script>
   <!-- javaScript code -->
   <script>
     var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
