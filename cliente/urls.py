@@ -12,5 +12,7 @@ urlpatterns=[
     path('GroundZeroRegister.html',views.GroundZeroRegister,name="GroundZeroRegister.html"),
     path('GroundZeroPaises.html',views.GroundZeroPaises,name="GroundZeroPaises.html"),
     path('GroundZeropPQ.html',views.GroundZeropPQ,name="GroundZeropPQ.html"),
+    path('GroundZeroInicio.html',views.GroundZeroInicio,name="GroundZeroInicio.html"),
+    path('index.html',views.index,name="index.html"),
   
 ]

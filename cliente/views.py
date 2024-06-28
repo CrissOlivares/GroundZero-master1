@@ -2,14 +2,17 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .models import usuario,Genero
 # Create your views here.
-def index(request):
-    cliente=usuario.objetcs.all()
-    context={"usuario":usuario}
-    return render(request,'index.html',context)
+
 
 TEMPLATE_DIRS=(
     'os.path.join(BASE_DIR, "templates"),'
 )
+
+def index(request):
+    usuarios=usuario.objects.all()
+    context={"Usuarios":usuarios}
+    return render(request,'index.html',context)
+
 def GroundZeroInicio(request):
     return render(request,'GroundZeroInicio.html')
 
@@ -40,8 +43,4 @@ def GroundZeroPaises(request):
 def GroundZeropPQ(request):
     return render(request,'GroundZeropPQ.html')
 
-def GroundZeropPQ(request):
-    return render(request,'GroundZeroInicio.html')
 
-def GroundZeropPQ(request):
-    return render(request,'index.html')
